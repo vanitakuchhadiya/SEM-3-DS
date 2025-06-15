@@ -6,11 +6,8 @@ void main(){
     printf("Enter a value of seconds: ");
     scanf("%d",&days);
     
-    year=days%365;
-    days=days/365;
-    week=days%7;
-    days=days/7;
-    day=days;
-
+    year=days/365;
+    week=(days%365)/7;
+    days=(days%365)%7;
     printf("%d year, %d week and %d days",year,week,day);
 }
